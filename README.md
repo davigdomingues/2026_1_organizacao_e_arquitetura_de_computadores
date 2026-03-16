@@ -1,3 +1,5 @@
+# 2026_1_organizacao_e_arquitetura_de_computadores
+
 Códigos produzidos durante a ministração da disciplina "Organização e Arquitetura de Computadores", na USP, campus São Carlos (ano de 2026).
 
 Ambiente de desenvolvimento/simulação de códigos: RARS ou venus (https://venus.kvakil.me/)
