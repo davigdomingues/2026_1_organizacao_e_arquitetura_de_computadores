@@ -5,9 +5,11 @@
     # Reservando 64 bytes para cada buffer
     input_buffer: .space 64
     output_buffer: .space 64
+    
+    .align 0 # alinha o conteúdo das memórias para caracteres
 
 .text
-	.align 0
+	.align 2 # alinha words ("inteiros")
 	.globl main
 
 main:
@@ -47,9 +49,9 @@ main:
 # a0: ponteiro para destino (dst)
 # a1: ponteiro para origem (src)
 strcpy:
-    lbu   t1, 0(a1) # Carrega byte da origem
-    sb    t1, 0(a0) # Salva byte no destino
-    addi  a0, a0, 1 # Avança ponteiro destino
-    addi  a1, a1, 1 # Avança ponteiro origem
-    bnez  t1, strcpy # Se o byte não for '\0', repete (recursivo ou loop)
+    lbu t1, 0(a1) # Carrega byte da origem
+    sb t1, 0(a0) # Salva byte no destino
+    addi a0, a0, 1 # Avança ponteiro destino
+    addi a1, a1, 1 # Avança ponteiro origem
+    bnez t1, strcpy # Se o byte não for '\0', repete (recursivo ou loop)
     ret # Retorna
