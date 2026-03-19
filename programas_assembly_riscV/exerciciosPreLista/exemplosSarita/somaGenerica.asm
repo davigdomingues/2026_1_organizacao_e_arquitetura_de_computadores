@@ -11,8 +11,8 @@ main:
     ecall
 
     # 2. Carrega números nos registradores
-    li t0, 10      # t0 = 10
-    li t1, 25      # t1 = 25
+    li t0, 10 # t0 = 10
+    li t1, 25 # t1 = 25
 
     # 3. Soma os valores e guarda em a0
     # Usamos a0 porque o serviço de impressão de inteiro (a7=1) lê de a0
