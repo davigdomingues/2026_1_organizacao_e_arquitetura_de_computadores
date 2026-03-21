@@ -23,7 +23,6 @@ loopInverter:
 	add t1, t1, t3 # adiciona o dígito obtido na operação de módulo (linha 18)
 	div t0, t0, t2 # elimina o último dígito de N
 	
-	
 	j loopInverter
 
 comparar:
