@@ -109,7 +109,7 @@ loopImpressao:
     li a7, 1 # impressão do número
     ecall
     
-    li a7, 11
+    li a7, 11 # serviço de impressão de caractere
     li a0, 32 # imprime espaço em branco (ASCII 32)
     ecall
     
